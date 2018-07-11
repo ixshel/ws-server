@@ -31,15 +31,15 @@ export class ChatServer {
             next();
         });
 
-        this.app.use(express.static(path.join(__dirname, 'public')));
+        // this.app.use(express.static(path.join(__dirname, 'public')));
 
         this.app.get('/status', (request, response) => {
             response.send({ message: "Ok" });
         });
 
-        this.app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, 'public/index.html'));
-        });
+        // this.app.get('*', (req, res) => {
+        //     res.sendFile(path.join(__dirname, 'public/index.html'));
+        // });
 
     }
 
